@@ -1,0 +1,12 @@
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer\VehiculoTransporte\obj\Debug\Dealer.csprojResolveAssemblyReference.cache
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer\VehiculoTransporte\bin\Debug\Dealer.exe.config
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer\VehiculoTransporte\bin\Debug\Dealer.exe
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer\VehiculoTransporte\bin\Debug\Dealer.pdb
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer\VehiculoTransporte\obj\Debug\Dealer.exe
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer\VehiculoTransporte\obj\Debug\Dealer.pdb
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\bin\Debug\Dealer.exe.config
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\obj\Debug\Dealer.exe
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\obj\Debug\Dealer.pdb
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\bin\Debug\Dealer.exe
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\bin\Debug\Dealer.pdb
+C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\obj\Debug\Dealer.csprojResolveAssemblyReference.cache
