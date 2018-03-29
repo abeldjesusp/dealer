@@ -140,8 +140,6 @@ namespace Dealer
                 no++;
 
                 str_texto.Append("\n" + unComputo.ToString());
-
-
             }
             return str_texto.ToString();
         }

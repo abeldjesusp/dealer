@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +29,7 @@ namespace Dealer
               
                 do
                 {
-                    Console.WriteLine("\n Santana's Autos & Mas\n\n Menu del Usuario \n");
+                    Console.WriteLine("\n Autos AAAA Ventas de vehiculos nuevos y usados\n\n Menu del Usuario \n");
                     Console.WriteLine("\n 1- Catalogo de vehiculos");
                     Console.WriteLine("\n 2- Definicion de individuos");
                     Console.WriteLine("\n 3- Informacion de las sucursales");

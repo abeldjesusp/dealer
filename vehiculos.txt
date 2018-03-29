@@ -1,0 +1,10 @@
+696810300 | fadfdfdf | afdfdf | fadfdfd |  fasdfdf |21/3/2018 1:16:01 p.m.
+1941607246 | Toyota | Corolla | Classic |  Nuevo |29/3/2018 9:11:51 a.m.
+77868658 | Toyota | Camry | Classic |  Usado |29/3/2018 9:13:22 a.m.
+920803714 | Honda | Civic | Compacto |  Usado |29/3/2018 9:22:13 a.m.
+518103363 | Honda | Passport | Todoterreno |  Nuevo |29/3/2018 9:23:33 a.m.
+344493917 | Mercedes-Benz | Clase SL | Deportivo |   |29/3/2018 9:32:12 a.m.
+100205838 | Hyundai | Sonata | Hybrid |  Usado |29/3/2018 9:35:37 a.m.
+635771664 | Kia | Picanto | Turismo |  Nuevo |29/3/2018 9:39:05 a.m.
+1153972276 | Suzuki | Alto | Turismo |  Usado |29/3/2018 9:40:41 a.m.
+1590777968 | Mitsubishi | Mirage | Compacto |  Usado |29/3/2018 9:46:25 a.m.

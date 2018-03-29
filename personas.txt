@@ -1,0 +1,5 @@
+760337018 | Abel De Jesus | Gerente General | 1 | 250000 | 08-03-2015 | 29/3/2018 9:48:12 a.m.
+59293754 | Abraham Liriano | Jefe de negocios | 2 | 240000 |  | 29/3/2018 9:49:03 a.m.
+750946247 | Jeferson Alexander | Jefe en seguridad | 3 | 250000 | 02-03-2015 | 29/3/2018 9:57:05 a.m.
+1804764470 | Angel Odoner Rosario | Jefe de limpieza | 4 | 45000 | 03-05-2017 | 29/3/2018 9:58:20 a.m.
+1319870073 | Pedro Salami | Vendedor | 5 | 60000 | 02-05-2018 | 29/3/2018 11:53:58 a.m.

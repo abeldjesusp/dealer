@@ -10,3 +10,10 @@ C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransp
 C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\bin\Debug\Dealer.exe
 C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\bin\Debug\Dealer.pdb
 C:\Users\villaman\Desktop\programacion 1\TEO\prog1\Dealer - copia\VehiculoTransporte\obj\Debug\Dealer.csprojResolveAssemblyReference.cache
+C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\bin\Debug\Dealer.exe.config
+C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\bin\Debug\Dealer.exe
+C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\bin\Debug\Dealer.pdb
+C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.csprojResolveAssemblyReference.cache
+C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.csproj.CoreCompileInputs.cache
+C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.exe
+C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.pdb
