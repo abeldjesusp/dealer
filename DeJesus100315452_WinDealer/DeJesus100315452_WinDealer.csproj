@@ -52,6 +52,12 @@
     <Compile Include="PersonalWindowForm.Designer.cs">
       <DependentUpon>PersonalWindowForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="sucursalesWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sucursalesWindowForm.Designer.cs">
+      <DependentUpon>sucursalesWindowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehiculosWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PersonalWindowForm.resx">
       <DependentUpon>PersonalWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sucursalesWindowForm.resx">
+      <DependentUpon>sucursalesWindowForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehiculosWindowForm.resx">
       <DependentUpon>VehiculosWindowForm.cs</DependentUpon>

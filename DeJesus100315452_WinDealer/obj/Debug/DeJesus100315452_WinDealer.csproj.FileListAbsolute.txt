@@ -13,3 +13,4 @@ C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus1003154
 C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\DeJesus100315452_WinDealer.exe.config
 C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.VehiculosWindowForm.resources
 C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.PersonalWindowForm.resources
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.sucursalesWindowForm.resources

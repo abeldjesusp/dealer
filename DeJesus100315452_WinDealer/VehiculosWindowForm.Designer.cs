@@ -57,6 +57,7 @@
             this.dataGridVehiculos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridVehiculos.Location = new System.Drawing.Point(0, 0);
             this.dataGridVehiculos.Name = "dataGridVehiculos";
+            this.dataGridVehiculos.ReadOnly = true;
             this.dataGridVehiculos.Size = new System.Drawing.Size(733, 402);
             this.dataGridVehiculos.TabIndex = 0;
             // 
@@ -64,33 +65,39 @@
             // 
             this.idVehiculo.HeaderText = "ID";
             this.idVehiculo.Name = "idVehiculo";
+            this.idVehiculo.ReadOnly = true;
             // 
             // marcaVehiculo
             // 
             this.marcaVehiculo.HeaderText = "Marca";
             this.marcaVehiculo.Name = "marcaVehiculo";
+            this.marcaVehiculo.ReadOnly = true;
             // 
             // modeloVehiculo
             // 
             this.modeloVehiculo.HeaderText = "Modelo";
             this.modeloVehiculo.Name = "modeloVehiculo";
+            this.modeloVehiculo.ReadOnly = true;
             // 
             // tipoVehiculo
             // 
             this.tipoVehiculo.HeaderText = "Tipo de vehiculo";
             this.tipoVehiculo.Name = "tipoVehiculo";
+            this.tipoVehiculo.ReadOnly = true;
             this.tipoVehiculo.Width = 130;
             // 
             // estadoVehiculo
             // 
             this.estadoVehiculo.HeaderText = "Estado del vehiculo";
             this.estadoVehiculo.Name = "estadoVehiculo";
+            this.estadoVehiculo.ReadOnly = true;
             this.estadoVehiculo.Width = 130;
             // 
             // fechaVehiculo
             // 
             this.fechaVehiculo.HeaderText = "Fecha de registro";
             this.fechaVehiculo.Name = "fechaVehiculo";
+            this.fechaVehiculo.ReadOnly = true;
             this.fechaVehiculo.Width = 130;
             // 
             // VehiculosWindowForm

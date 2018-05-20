@@ -14,6 +14,7 @@ namespace DeJesus100315452_WinDealer
     {
         DeJesus100315452_LibDealer.Vehiculos objVehiculo;
         DeJesus100315452_LibDealer.Personas objPersona;
+        DeJesus100315452_LibDealer.Sucursales objSucursales;
 
         public MainWindowForm()
         {
@@ -297,6 +298,53 @@ namespace DeJesus100315452_WinDealer
         {
             PersonalWindowForm objPersonalWindow = new PersonalWindowForm();
             objPersonalWindow.Show();
+        }
+
+        private void btnAtrasSucursal_Click(object sender, EventArgs e)
+        {
+            panelSucursales.Visible = false;
+        }
+
+        private void btnRegistrarSucursal_Click(object sender, EventArgs e)
+        {
+            string nombre, estado, apertura;
+
+            nombre = nombreSucursal.Text;
+            estado = estadoSucursal.Text;
+            apertura = fechaAperturaSucursal.Text;
+
+            objSucursales = new DeJesus100315452_LibDealer.Sucursales(nombre, estado, apertura);
+
+            DialogResult dialogResult = MessageBox.Show("¿Desea guardarlo?", "Guardar...", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (objSucursales.Grabar())
+                    MessageBox.Show("Se ha guardado existosamente :D");
+                else
+                    MessageBox.Show("Error {0}", objSucursales.getMensaje());
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Trate nuevamente :(");
+            }
+            objSucursales = null;
+            nombreSucursal.Text = "";
+            estadoSucursal.Text = "";
+            fechaAperturaSucursal.Text = "";
+        }
+
+        private void btnLimpiarSucursales_Click(object sender, EventArgs e)
+        {
+            nombreSucursal.Text = "";
+            estadoSucursal.Text = "";
+            fechaAperturaSucursal.Text = "";
+        }
+
+        private void btnVerSucursales_Click(object sender, EventArgs e)
+        {
+            sucursalesWindowForm objSucursalesWindow = new sucursalesWindowForm();
+            objSucursalesWindow.Show();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalWindowForm));
             this.dataGridPersonal = new System.Windows.Forms.DataGridView();
             this.idPersonal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePersonal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +43,6 @@
             // 
             this.dataGridPersonal.AllowUserToAddRows = false;
             this.dataGridPersonal.AllowUserToDeleteRows = false;
-            this.dataGridPersonal.AllowUserToOrderColumns = true;
             this.dataGridPersonal.AllowUserToResizeColumns = false;
             this.dataGridPersonal.AllowUserToResizeRows = false;
             this.dataGridPersonal.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -57,6 +57,7 @@
             this.dataGridPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridPersonal.Location = new System.Drawing.Point(0, 0);
             this.dataGridPersonal.Name = "dataGridPersonal";
+            this.dataGridPersonal.ReadOnly = true;
             this.dataGridPersonal.Size = new System.Drawing.Size(757, 395);
             this.dataGridPersonal.TabIndex = 0;
             // 
@@ -64,33 +65,39 @@
             // 
             this.idPersonal.HeaderText = "ID";
             this.idPersonal.Name = "idPersonal";
+            this.idPersonal.ReadOnly = true;
             // 
             // nombrePersonal
             // 
             this.nombrePersonal.HeaderText = "Nombre";
             this.nombrePersonal.Name = "nombrePersonal";
+            this.nombrePersonal.ReadOnly = true;
             // 
             // cargoPersonal
             // 
             this.cargoPersonal.HeaderText = "Cargo que ocupa";
             this.cargoPersonal.Name = "cargoPersonal";
+            this.cargoPersonal.ReadOnly = true;
             this.cargoPersonal.Width = 130;
             // 
             // codioEmpleado
             // 
             this.codioEmpleado.HeaderText = "Código de empleado";
             this.codioEmpleado.Name = "codioEmpleado";
+            this.codioEmpleado.ReadOnly = true;
             this.codioEmpleado.Width = 130;
             // 
             // salarioPersonal
             // 
             this.salarioPersonal.HeaderText = "Salario";
             this.salarioPersonal.Name = "salarioPersonal";
+            this.salarioPersonal.ReadOnly = true;
             // 
             // fehaIngresoEmpleado
             // 
             this.fehaIngresoEmpleado.HeaderText = "Fecha de ingreso";
             this.fehaIngresoEmpleado.Name = "fehaIngresoEmpleado";
+            this.fehaIngresoEmpleado.ReadOnly = true;
             this.fehaIngresoEmpleado.Width = 150;
             // 
             // PersonalWindowForm
@@ -99,8 +106,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 395);
             this.Controls.Add(this.dataGridPersonal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonalWindowForm";
-            this.Text = "PersonalWindowForm";
+            this.Text = "Personal";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPersonal)).EndInit();
             this.ResumeLayout(false);
 
