@@ -346,5 +346,16 @@ namespace DeJesus100315452_WinDealer
             sucursalesWindowForm objSucursalesWindow = new sucursalesWindowForm();
             objSucursalesWindow.Show();
         }
+
+        private void btnAtrasVentas_Click(object sender, EventArgs e)
+        {
+            panelVentas.Visible = false;
+        }
+
+        private void btnVerVentas_Click(object sender, EventArgs e)
+        {
+            ventasWindowForm objVentasWindow = new ventasWindowForm();
+            objVentasWindow.Show();
+        }
     }
 }

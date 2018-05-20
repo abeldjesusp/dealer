@@ -126,6 +126,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.nombreSucursal = new System.Windows.Forms.TextBox();
             this.estadoSucursal = new System.Windows.Forms.TextBox();
+            this.btnLimpiarVentas = new System.Windows.Forms.Button();
+            this.btnVerVentas = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelCatalogoVehiculos.SuspendLayout();
             this.panelComputos.SuspendLayout();
@@ -727,6 +730,9 @@
             // panelVentas
             // 
             this.panelVentas.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelVentas.Controls.Add(this.label1);
+            this.panelVentas.Controls.Add(this.btnVerVentas);
+            this.panelVentas.Controls.Add(this.btnLimpiarVentas);
             this.panelVentas.Controls.Add(this.btnAtrasVentas);
             this.panelVentas.Controls.Add(this.btnRegistrarVenta);
             this.panelVentas.Controls.Add(this.textBox12);
@@ -749,16 +755,17 @@
             // 
             // btnAtrasVentas
             // 
-            this.btnAtrasVentas.Location = new System.Drawing.Point(598, 513);
+            this.btnAtrasVentas.Location = new System.Drawing.Point(599, 493);
             this.btnAtrasVentas.Name = "btnAtrasVentas";
             this.btnAtrasVentas.Size = new System.Drawing.Size(75, 33);
             this.btnAtrasVentas.TabIndex = 61;
             this.btnAtrasVentas.Text = "Ir atrás";
             this.btnAtrasVentas.UseVisualStyleBackColor = true;
+            this.btnAtrasVentas.Click += new System.EventHandler(this.btnAtrasVentas_Click);
             // 
             // btnRegistrarVenta
             // 
-            this.btnRegistrarVenta.Location = new System.Drawing.Point(696, 513);
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(761, 493);
             this.btnRegistrarVenta.Name = "btnRegistrarVenta";
             this.btnRegistrarVenta.Size = new System.Drawing.Size(75, 33);
             this.btnRegistrarVenta.TabIndex = 60;
@@ -767,32 +774,32 @@
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(518, 401);
+            this.textBox12.Location = new System.Drawing.Point(518, 392);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(253, 20);
+            this.textBox12.Size = new System.Drawing.Size(318, 20);
             this.textBox12.TabIndex = 59;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(518, 445);
+            this.textBox11.Location = new System.Drawing.Point(518, 436);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(253, 20);
+            this.textBox11.Size = new System.Drawing.Size(318, 20);
             this.textBox11.TabIndex = 58;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(518, 354);
+            this.comboBox2.Location = new System.Drawing.Point(518, 345);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(253, 21);
+            this.comboBox2.Size = new System.Drawing.Size(318, 21);
             this.comboBox2.TabIndex = 56;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(518, 310);
+            this.comboBox1.Location = new System.Drawing.Point(518, 301);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(253, 21);
+            this.comboBox1.Size = new System.Drawing.Size(318, 21);
             this.comboBox1.TabIndex = 55;
             // 
             // label18
@@ -807,7 +814,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(399, 401);
+            this.label17.Location = new System.Drawing.Point(399, 399);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(58, 13);
             this.label17.TabIndex = 53;
@@ -816,7 +823,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(399, 354);
+            this.label16.Location = new System.Drawing.Point(399, 353);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 13);
             this.label16.TabIndex = 52;
@@ -825,7 +832,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(399, 310);
+            this.label15.Location = new System.Drawing.Point(399, 309);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 13);
             this.label15.TabIndex = 51;
@@ -977,6 +984,34 @@
             this.estadoSucursal.Size = new System.Drawing.Size(341, 20);
             this.estadoSucursal.TabIndex = 7;
             // 
+            // btnLimpiarVentas
+            // 
+            this.btnLimpiarVentas.Location = new System.Drawing.Point(680, 493);
+            this.btnLimpiarVentas.Name = "btnLimpiarVentas";
+            this.btnLimpiarVentas.Size = new System.Drawing.Size(75, 33);
+            this.btnLimpiarVentas.TabIndex = 62;
+            this.btnLimpiarVentas.Text = "Limpiar";
+            this.btnLimpiarVentas.UseVisualStyleBackColor = true;
+            // 
+            // btnVerVentas
+            // 
+            this.btnVerVentas.Location = new System.Drawing.Point(518, 491);
+            this.btnVerVentas.Name = "btnVerVentas";
+            this.btnVerVentas.Size = new System.Drawing.Size(75, 33);
+            this.btnVerVentas.TabIndex = 63;
+            this.btnVerVentas.Text = "Ver ventas";
+            this.btnVerVentas.UseVisualStyleBackColor = true;
+            this.btnVerVentas.Click += new System.EventHandler(this.btnVerVentas_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(399, 443);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Precio";
+            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1103,6 +1138,9 @@
         private System.Windows.Forms.Button btnLimpiarPersonal;
         private System.Windows.Forms.Button btnLimpiarSucursales;
         private System.Windows.Forms.Button btnVerSucursales;
+        private System.Windows.Forms.Button btnVerVentas;
+        private System.Windows.Forms.Button btnLimpiarVentas;
+        private System.Windows.Forms.Label label1;
     }
 }
 

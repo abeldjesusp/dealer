@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ventasWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventasWindowForm.Designer.cs">
+      <DependentUpon>ventasWindowForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PersonalWindowForm.resx">
       <DependentUpon>PersonalWindowForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ventasWindowForm.resx">
+      <DependentUpon>ventasWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
