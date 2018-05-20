@@ -1,8 +1,9 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DeJesus100315452_LibDealer;
 
 namespace Dealer
 {
@@ -12,11 +13,11 @@ namespace Dealer
         {
             try
             {
-                Dealer.Vehiculos objVehiculo;
-                Dealer.Personas objPersona;
-                Dealer.Sucursales objSucursal;
-                Dealer.Ventas objVentas;
-                Dealer.Computos objComputo;
+                DeJesus100315452_LibDealer.Vehiculos objVehiculo;
+                DeJesus100315452_LibDealer.Personas objPersona;
+                DeJesus100315452_LibDealer.Sucursales objSucursal;
+                DeJesus100315452_LibDealer.Ventas objVentas;
+                DeJesus100315452_LibDealer.Computos objComputo;
                 double cantidad = 0;
                 
                 short opcion;
@@ -55,7 +56,7 @@ namespace Dealer
                                 tipov = Console.ReadLine();
                                 Console.Write("\n Estado del vehiculo: ");
                                 entrega = Console.ReadLine();
-                                objVehiculo = new Dealer.Vehiculos(marca, modelo, tipov, entrega);
+                                objVehiculo = new DeJesus100315452_LibDealer.Vehiculos(marca, modelo, tipov, entrega);
                                 Console.Write("Desea guardarlo? \n [1-si 0-no] \n");
                                 opcion = short.Parse(Console.ReadLine());
                                 if (opcion == 1)
@@ -65,7 +66,7 @@ namespace Dealer
                                         Console.Write("\n ERROR!!!-->" + objVehiculo.getMensaje());
                                 objVehiculo = null;
                             }
-                            objVehiculo = new Dealer.Vehiculos();
+                            objVehiculo = new DeJesus100315452_LibDealer.Vehiculos();
 
                             Console.WriteLine("\t Datos: \n");
                             Console.WriteLine(objVehiculo.AlltableString());
@@ -88,7 +89,7 @@ namespace Dealer
                                      salario = int.Parse(Console.ReadLine());
                                      Console.Write("\n Fecha de ingreso(Solo vendedor): ");
                                      ingreso = Console.ReadLine();
-                                  objPersona = new Dealer.Personas(nombre, funcion, codigo, salario, ingreso);       
+                                  objPersona = new DeJesus100315452_LibDealer.Personas(nombre, funcion, codigo, salario, ingreso);       
                                      Console.Write("Desea guardarlo? \n [1-si 0-no] \n");
                                      opcion = short.Parse(Console.ReadLine());
                                      if (opcion == 1)
@@ -98,7 +99,7 @@ namespace Dealer
                                               Console.Write("\n ERROR!!!-->" + objPersona.getMensaje());
                                      objPersona = null;            
                                         }
-                              objPersona = new Dealer.Personas();
+                              objPersona = new DeJesus100315452_LibDealer.Personas();
 
                               Console.WriteLine("\t Datos: \n");
                                     Console.WriteLine(objPersona.AlltableString());
@@ -117,7 +118,7 @@ namespace Dealer
                                      estado = Console.ReadLine();
                                      Console.Write(" \n Fecha de inauguracion: ");
                                      fechaap = Console.ReadLine();
-                                     objSucursal = new Dealer.Sucursales(sucursal, estado, fechaap);       
+                                     objSucursal = new DeJesus100315452_LibDealer.Sucursales(sucursal, estado, fechaap);       
                                      Console.Write("Desea guardarlo? \n [1-si 0-no] \n");
                                      opcion = short.Parse(Console.ReadLine());
                                      if (opcion == 1)
@@ -127,7 +128,7 @@ namespace Dealer
                                               Console.Write("\n ERROR!!!-->" + objSucursal.getMensaje());
                                      objSucursal = null;            
                                         }
-                              objSucursal = new Dealer.Sucursales();
+                              objSucursal = new DeJesus100315452_LibDealer.Sucursales();
 
                               Console.WriteLine("\t Datos:\n");
                                     Console.WriteLine(objSucursal.AllTableString());
@@ -149,7 +150,7 @@ namespace Dealer
                                 comprador = Console.ReadLine();
                                 Console.Write(" \n Precio: ");
                                 precio = int.Parse(Console.ReadLine());
-                                objVentas = new Dealer.Ventas(vehiculo, vendedor, comprador, precio);
+                                objVentas = new DeJesus100315452_LibDealer.Ventas(vehiculo, vendedor, comprador, precio);
                                 Console.Write("Desea guardarlo? \n [1-si 0-no] \n");
                                 opcion = short.Parse(Console.ReadLine());
                                 if (opcion == 1)
@@ -159,7 +160,7 @@ namespace Dealer
                                         Console.Write("\n ERROR!!!-->" + objVentas.getMensaje());
                                 objVentas = null;
                             }
-                            objVentas = new Dealer.Ventas();
+                            objVentas = new DeJesus100315452_LibDealer.Ventas();
 
                             Console.WriteLine("\t Datos: \n");
                             Console.WriteLine(objVentas.AlltableString());
@@ -182,7 +183,7 @@ namespace Dealer
                                 Console.Write("\n 3 marcas mas vendidas: ");
                                 masv = Console.ReadLine();
 
-                                objComputo = new Dealer.Computos(dinerov, comision, dineroxf, masv);
+                                objComputo = new DeJesus100315452_LibDealer.Computos(dinerov, comision, dineroxf, masv);
                                 Console.Write("Desea guardarlo? \n [1-si 0-no] \n");
                                 opcion = short.Parse(Console.ReadLine());
                                 if (opcion == 1)
@@ -192,7 +193,7 @@ namespace Dealer
                                         Console.Write("\n ERROR!!!-->" + objComputo.getMensaje());
                                 objComputo = null;
                             }
-                            objComputo = new Dealer.Computos();
+                            objComputo = new DeJesus100315452_LibDealer.Computos();
 
                             Console.WriteLine("\t Datos:\n");
                             Console.WriteLine(objComputo.AlltableString());
@@ -207,11 +208,11 @@ namespace Dealer
                             new Ventas().buscar(id);
                             new Computos().buscar(id);
 
-                            objVehiculo = new Dealer.Vehiculos();
-                            objPersona = new Dealer.Personas();
-                            objSucursal = new Dealer.Sucursales();
-                            objVentas = new Dealer.Ventas();
-                            objComputo = new Dealer.Computos();
+                            objVehiculo = new DeJesus100315452_LibDealer.Vehiculos();
+                            objPersona = new DeJesus100315452_LibDealer.Personas();
+                            objSucursal = new DeJesus100315452_LibDealer.Sucursales();
+                            objVentas = new DeJesus100315452_LibDealer.Ventas();
+                            objComputo = new DeJesus100315452_LibDealer.Computos();
 
 
                             Console.WriteLine("\t Datos:\n");

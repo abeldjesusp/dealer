@@ -1,0 +1,14 @@
+C:\Users\anyi\Documents\Abel\dealer\DeJesus100315452_LibDealer\bin\Debug\DeJesus100315452_LibDealer.dll.config
+C:\Users\anyi\Documents\Abel\dealer\DeJesus100315452_LibDealer\bin\Debug\DeJesus100315452_LibDealer.dll
+C:\Users\anyi\Documents\Abel\dealer\DeJesus100315452_LibDealer\bin\Debug\DeJesus100315452_LibDealer.pdb
+C:\Users\anyi\Documents\Abel\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.csprojResolveAssemblyReference.cache
+C:\Users\anyi\Documents\Abel\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.csproj.CoreCompileInputs.cache
+C:\Users\anyi\Documents\Abel\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.dll
+C:\Users\anyi\Documents\Abel\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.pdb
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_LibDealer\bin\Debug\DeJesus100315452_LibDealer.dll
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_LibDealer\bin\Debug\DeJesus100315452_LibDealer.pdb
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.csprojResolveAssemblyReference.cache
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.csproj.CoreCompileInputs.cache
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.dll
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_LibDealer\obj\Debug\DeJesus100315452_LibDealer.pdb
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_LibDealer\bin\Debug\DeJesus100315452_LibDealer.dll.config

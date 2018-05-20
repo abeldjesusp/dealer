@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dealer
+namespace DeJesus100315452_LibDealer
 {
     public interface iPersistencia
     {

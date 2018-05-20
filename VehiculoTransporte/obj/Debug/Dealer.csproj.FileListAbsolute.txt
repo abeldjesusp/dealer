@@ -17,3 +17,10 @@ C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.csprojResolveAs
 C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.csproj.CoreCompileInputs.cache
 C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.exe
 C:\Users\anyi\Desktop\Dealer\VehiculoTransporte\obj\Debug\Dealer.pdb
+C:\Users\anyi\Documents\Abel\dealer\VehiculoTransporte\bin\Debug\Dealer.exe.config
+C:\Users\anyi\Documents\Abel\dealer\VehiculoTransporte\bin\Debug\Dealer.exe
+C:\Users\anyi\Documents\Abel\dealer\VehiculoTransporte\bin\Debug\Dealer.pdb
+C:\Users\anyi\Documents\Abel\dealer\VehiculoTransporte\obj\Debug\Dealer.csprojResolveAssemblyReference.cache
+C:\Users\anyi\Documents\Abel\dealer\VehiculoTransporte\obj\Debug\Dealer.csproj.CoreCompileInputs.cache
+C:\Users\anyi\Documents\Abel\dealer\VehiculoTransporte\obj\Debug\Dealer.exe
+C:\Users\anyi\Documents\Abel\dealer\VehiculoTransporte\obj\Debug\Dealer.pdb

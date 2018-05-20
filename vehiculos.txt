@@ -1,4 +1,3 @@
-696810300 | fadfdfdf | afdfdf | fadfdfd |  fasdfdf |21/3/2018 1:16:01 p.m.
 1941607246 | Toyota | Corolla | Classic |  Nuevo |29/3/2018 9:11:51 a.m.
 77868658 | Toyota | Camry | Classic |  Usado |29/3/2018 9:13:22 a.m.
 920803714 | Honda | Civic | Compacto |  Usado |29/3/2018 9:22:13 a.m.
@@ -8,3 +7,5 @@
 635771664 | Kia | Picanto | Turismo |  Nuevo |29/3/2018 9:39:05 a.m.
 1153972276 | Suzuki | Alto | Turismo |  Usado |29/3/2018 9:40:41 a.m.
 1590777968 | Mitsubishi | Mirage | Compacto |  Usado |29/3/2018 9:46:25 a.m.
+168564732 | Kia | Sportage | Todoterreno |  Nuevo |18/5/2018 6:14:59 p.m.
+963747823 | Peugeot | Partner | Furgoneta pequeña |  Usado |19/5/2018 7:37:11 p.m.

@@ -1,0 +1,15 @@
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\DeJesus100315452_WinDealer.exe
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\DeJesus100315452_WinDealer.pdb
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\DeJesus100315452_LibDealer.dll
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\DeJesus100315452_LibDealer.pdb
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\DeJesus100315452_LibDealer.dll.config
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.csprojResolveAssemblyReference.cache
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.Properties.Resources.resources
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.csproj.GenerateResource.Cache
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.csproj.CoreCompileInputs.cache
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.exe
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.pdb
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.MainWindowForm.resources
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\DeJesus100315452_WinDealer.exe.config
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.VehiculosWindowForm.resources
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.PersonalWindowForm.resources

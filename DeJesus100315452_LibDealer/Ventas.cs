@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Configuration;
 
-namespace Dealer
+namespace DeJesus100315452_LibDealer
 {
     public class Ventas : iPersistencia
     {

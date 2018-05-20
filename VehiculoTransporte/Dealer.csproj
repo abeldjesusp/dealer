@@ -43,21 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Computos.cs" />
-    <Compile Include="Sucursales.cs" />
-    <Compile Include="iPersistencia.cs" />
-    <Compile Include="Personas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vehiculos.cs" />
-    <Compile Include="Ventas.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
+    <ProjectReference Include="..\DeJesus100315452_LibDealer\DeJesus100315452_LibDealer.csproj">
+      <Project>{0062c027-d4e6-4b4a-a4f9-407de956bd6c}</Project>
+      <Name>DeJesus100315452_LibDealer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
