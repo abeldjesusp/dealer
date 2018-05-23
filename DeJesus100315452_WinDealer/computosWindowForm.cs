@@ -12,42 +12,41 @@ using System.Windows.Forms;
 
 namespace DeJesus100315452_WinDealer
 {
-    public partial class ventasWindowForm : Form
+    public partial class computosWindowForm : Form
     {
-        private DeJesus100315452_LibDealer.Ventas objVentas = new DeJesus100315452_LibDealer.Ventas();
-        static string nombre = "ventas.txt";
+        private DeJesus100315452_LibDealer.Computos objComputos = new DeJesus100315452_LibDealer.Computos();
+        static string nombre = "computos.txt";
         static string ruta = ConfigurationManager.AppSettings["RootDirKey"];
         private StreamReader archivo = new StreamReader(ruta + "\\" + nombre);
         private int n;
         private string linea = "";
-        public ventasWindowForm()
+        public computosWindowForm()
         {
             InitializeComponent();
 
-            if (objVentas.Leer())
+            if (objComputos.Leer())
             {
                 while (!archivo.EndOfStream)
                 {
-                    n = dataGridVentas.Rows.Add();
+                    n = dataGridComputos.Rows.Add();
                     linea = archivo.ReadLine();
                     string[] campos = linea.Split('|');
-                    dataGridVentas.Rows[n].Cells[0].Value = campos[0];
-                    dataGridVentas.Rows[n].Cells[1].Value = campos[1];
-                    dataGridVentas.Rows[n].Cells[2].Value = campos[2];
-                    dataGridVentas.Rows[n].Cells[3].Value = campos[3];
-                    dataGridVentas.Rows[n].Cells[4].Value = campos[4];
-                    dataGridVentas.Rows[n].Cells[5].Value = campos[5];
+                    dataGridComputos.Rows[n].Cells[0].Value = campos[0];
+                    dataGridComputos.Rows[n].Cells[1].Value = campos[1];
+                    dataGridComputos.Rows[n].Cells[2].Value = campos[2];
+                    dataGridComputos.Rows[n].Cells[3].Value = campos[3];
+                    dataGridComputos.Rows[n].Cells[4].Value = campos[4];
+                    dataGridComputos.Rows[n].Cells[5].Value = campos[5];
                 }
                 archivo.Close();
                 archivo.Dispose();
             }
             else
             {
-                MessageBox.Show("Error {0}", objVentas.getMensaje());
+                MessageBox.Show("Error {0}", objComputos.getMensaje());
                 archivo.Close();
                 archivo.Dispose();
             }
-
         }
     }
 }

@@ -69,14 +69,14 @@
             this.subtituloCatalogoV = new System.Windows.Forms.Label();
             this.titutloCatalogoV = new System.Windows.Forms.Label();
             this.panelComputos = new System.Windows.Forms.Panel();
+            this.btnVerComputos = new System.Windows.Forms.Button();
+            this.btnLimpiarComputos = new System.Windows.Forms.Button();
             this.btnAtrasComputos = new System.Windows.Forms.Button();
             this.btnRegistrarComputos = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.cbMarcaComputos01 = new System.Windows.Forms.ComboBox();
+            this.tbTotalDineroRangoFecha = new System.Windows.Forms.TextBox();
+            this.tbTotalComision = new System.Windows.Forms.TextBox();
+            this.tbTotalDineroComputos = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -101,12 +101,15 @@
             this.subtituloPersonal = new System.Windows.Forms.Label();
             this.tituloPersonal = new System.Windows.Forms.Label();
             this.panelVentas = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnVerVentas = new System.Windows.Forms.Button();
+            this.btnLimpiarVentas = new System.Windows.Forms.Button();
             this.btnAtrasVentas = new System.Windows.Forms.Button();
             this.btnRegistrarVenta = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbCompradorVentas = new System.Windows.Forms.TextBox();
+            this.tbPrecioVentas = new System.Windows.Forms.TextBox();
+            this.cbVendedorVentas = new System.Windows.Forms.ComboBox();
+            this.cbVehiculoVentas = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -126,9 +129,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.nombreSucursal = new System.Windows.Forms.TextBox();
             this.estadoSucursal = new System.Windows.Forms.TextBox();
-            this.btnLimpiarVentas = new System.Windows.Forms.Button();
-            this.btnVerVentas = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelCatalogoVehiculos.SuspendLayout();
             this.panelComputos.SuspendLayout();
@@ -294,9 +294,10 @@
             this.panelCatalogoVehiculos.Controls.Add(this.label5);
             this.panelCatalogoVehiculos.Controls.Add(this.subtituloCatalogoV);
             this.panelCatalogoVehiculos.Controls.Add(this.titutloCatalogoV);
-            this.panelCatalogoVehiculos.Location = new System.Drawing.Point(897, 208);
+            this.panelCatalogoVehiculos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCatalogoVehiculos.Location = new System.Drawing.Point(0, 0);
             this.panelCatalogoVehiculos.Name = "panelCatalogoVehiculos";
-            this.panelCatalogoVehiculos.Size = new System.Drawing.Size(88, 67);
+            this.panelCatalogoVehiculos.Size = new System.Drawing.Size(1122, 749);
             this.panelCatalogoVehiculos.TabIndex = 11;
             this.panelCatalogoVehiculos.Visible = false;
             this.panelCatalogoVehiculos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCatalogoVehiculos_Paint);
@@ -426,97 +427,104 @@
             // panelComputos
             // 
             this.panelComputos.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelComputos.Controls.Add(this.btnVerComputos);
+            this.panelComputos.Controls.Add(this.btnLimpiarComputos);
             this.panelComputos.Controls.Add(this.btnAtrasComputos);
             this.panelComputos.Controls.Add(this.btnRegistrarComputos);
-            this.panelComputos.Controls.Add(this.comboBox5);
-            this.panelComputos.Controls.Add(this.comboBox4);
-            this.panelComputos.Controls.Add(this.comboBox3);
-            this.panelComputos.Controls.Add(this.textBox15);
-            this.panelComputos.Controls.Add(this.textBox14);
-            this.panelComputos.Controls.Add(this.textBox13);
+            this.panelComputos.Controls.Add(this.cbMarcaComputos01);
+            this.panelComputos.Controls.Add(this.tbTotalDineroRangoFecha);
+            this.panelComputos.Controls.Add(this.tbTotalComision);
+            this.panelComputos.Controls.Add(this.tbTotalDineroComputos);
             this.panelComputos.Controls.Add(this.label22);
             this.panelComputos.Controls.Add(this.label21);
             this.panelComputos.Controls.Add(this.label20);
             this.panelComputos.Controls.Add(this.label19);
             this.panelComputos.Controls.Add(this.subtituloComputos);
             this.panelComputos.Controls.Add(this.tituloComputos);
-            this.panelComputos.Location = new System.Drawing.Point(987, 344);
+            this.panelComputos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelComputos.Location = new System.Drawing.Point(236, 24);
             this.panelComputos.Name = "panelComputos";
-            this.panelComputos.Size = new System.Drawing.Size(123, 128);
+            this.panelComputos.Size = new System.Drawing.Size(886, 725);
             this.panelComputos.TabIndex = 49;
             this.panelComputos.Visible = false;
             // 
+            // btnVerComputos
+            // 
+            this.btnVerComputos.Location = new System.Drawing.Point(323, 467);
+            this.btnVerComputos.Name = "btnVerComputos";
+            this.btnVerComputos.Size = new System.Drawing.Size(81, 36);
+            this.btnVerComputos.TabIndex = 15;
+            this.btnVerComputos.Text = "Ver computos";
+            this.btnVerComputos.UseVisualStyleBackColor = true;
+            this.btnVerComputos.Click += new System.EventHandler(this.btnVerComputos_Click);
+            // 
+            // btnLimpiarComputos
+            // 
+            this.btnLimpiarComputos.Location = new System.Drawing.Point(491, 467);
+            this.btnLimpiarComputos.Name = "btnLimpiarComputos";
+            this.btnLimpiarComputos.Size = new System.Drawing.Size(75, 36);
+            this.btnLimpiarComputos.TabIndex = 14;
+            this.btnLimpiarComputos.Text = "Limpiar";
+            this.btnLimpiarComputos.UseVisualStyleBackColor = true;
+            this.btnLimpiarComputos.Click += new System.EventHandler(this.btnLimpiarComputos_Click);
+            // 
             // btnAtrasComputos
             // 
-            this.btnAtrasComputos.Location = new System.Drawing.Point(392, 554);
+            this.btnAtrasComputos.Location = new System.Drawing.Point(410, 467);
             this.btnAtrasComputos.Name = "btnAtrasComputos";
             this.btnAtrasComputos.Size = new System.Drawing.Size(75, 36);
             this.btnAtrasComputos.TabIndex = 13;
             this.btnAtrasComputos.Text = "Ir atrás";
             this.btnAtrasComputos.UseVisualStyleBackColor = true;
+            this.btnAtrasComputos.Click += new System.EventHandler(this.btnAtrasComputos_Click);
             // 
             // btnRegistrarComputos
             // 
-            this.btnRegistrarComputos.Location = new System.Drawing.Point(487, 554);
+            this.btnRegistrarComputos.Location = new System.Drawing.Point(572, 467);
             this.btnRegistrarComputos.Name = "btnRegistrarComputos";
             this.btnRegistrarComputos.Size = new System.Drawing.Size(75, 36);
             this.btnRegistrarComputos.TabIndex = 12;
             this.btnRegistrarComputos.Text = "Registrar";
             this.btnRegistrarComputos.UseVisualStyleBackColor = true;
+            this.btnRegistrarComputos.Click += new System.EventHandler(this.btnRegistrarComputos_Click);
             // 
-            // comboBox5
+            // cbMarcaComputos01
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(320, 490);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(239, 21);
-            this.comboBox5.TabIndex = 11;
+            this.cbMarcaComputos01.FormattingEnabled = true;
+            this.cbMarcaComputos01.Location = new System.Drawing.Point(320, 413);
+            this.cbMarcaComputos01.Name = "cbMarcaComputos01";
+            this.cbMarcaComputos01.Size = new System.Drawing.Size(324, 21);
+            this.cbMarcaComputos01.TabIndex = 9;
             // 
-            // comboBox4
+            // tbTotalDineroRangoFecha
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(320, 417);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(239, 21);
-            this.comboBox4.TabIndex = 10;
+            this.tbTotalDineroRangoFecha.Location = new System.Drawing.Point(320, 354);
+            this.tbTotalDineroRangoFecha.Name = "tbTotalDineroRangoFecha";
+            this.tbTotalDineroRangoFecha.Size = new System.Drawing.Size(324, 20);
+            this.tbTotalDineroRangoFecha.TabIndex = 8;
             // 
-            // comboBox3
+            // tbTotalComision
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(320, 454);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(239, 21);
-            this.comboBox3.TabIndex = 9;
+            this.tbTotalComision.Location = new System.Drawing.Point(320, 310);
+            this.tbTotalComision.Name = "tbTotalComision";
+            this.tbTotalComision.Size = new System.Drawing.Size(324, 20);
+            this.tbTotalComision.TabIndex = 7;
             // 
-            // textBox15
+            // tbTotalDineroComputos
             // 
-            this.textBox15.Location = new System.Drawing.Point(320, 354);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(239, 20);
-            this.textBox15.TabIndex = 8;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(320, 310);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(239, 20);
-            this.textBox14.TabIndex = 7;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(320, 261);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(239, 20);
-            this.textBox13.TabIndex = 6;
+            this.tbTotalDineroComputos.Location = new System.Drawing.Point(320, 261);
+            this.tbTotalDineroComputos.Name = "tbTotalDineroComputos";
+            this.tbTotalDineroComputos.Size = new System.Drawing.Size(324, 20);
+            this.tbTotalDineroComputos.TabIndex = 6;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(112, 413);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(133, 13);
+            this.label22.Size = new System.Drawing.Size(100, 13);
             this.label22.TabIndex = 5;
-            this.label22.Text = "Tres marcas mas vendidas";
+            this.label22.Text = "Marca mas vendida";
             // 
             // label21
             // 
@@ -530,7 +538,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(110, 310);
+            this.label20.Location = new System.Drawing.Point(112, 310);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(158, 13);
             this.label20.TabIndex = 3;
@@ -539,7 +547,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(112, 261);
+            this.label19.Location = new System.Drawing.Point(110, 261);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(131, 13);
             this.label19.TabIndex = 2;
@@ -583,9 +591,10 @@
             this.panelPersonal.Controls.Add(this.label10);
             this.panelPersonal.Controls.Add(this.subtituloPersonal);
             this.panelPersonal.Controls.Add(this.tituloPersonal);
-            this.panelPersonal.Location = new System.Drawing.Point(1019, 281);
+            this.panelPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPersonal.Location = new System.Drawing.Point(0, 0);
             this.panelPersonal.Name = "panelPersonal";
-            this.panelPersonal.Size = new System.Drawing.Size(80, 50);
+            this.panelPersonal.Size = new System.Drawing.Size(1122, 749);
             this.panelPersonal.TabIndex = 11;
             this.panelPersonal.Visible = false;
             // 
@@ -735,10 +744,10 @@
             this.panelVentas.Controls.Add(this.btnLimpiarVentas);
             this.panelVentas.Controls.Add(this.btnAtrasVentas);
             this.panelVentas.Controls.Add(this.btnRegistrarVenta);
-            this.panelVentas.Controls.Add(this.textBox12);
-            this.panelVentas.Controls.Add(this.textBox11);
-            this.panelVentas.Controls.Add(this.comboBox2);
-            this.panelVentas.Controls.Add(this.comboBox1);
+            this.panelVentas.Controls.Add(this.tbCompradorVentas);
+            this.panelVentas.Controls.Add(this.tbPrecioVentas);
+            this.panelVentas.Controls.Add(this.cbVendedorVentas);
+            this.panelVentas.Controls.Add(this.cbVehiculoVentas);
             this.panelVentas.Controls.Add(this.label18);
             this.panelVentas.Controls.Add(this.label17);
             this.panelVentas.Controls.Add(this.label16);
@@ -752,6 +761,35 @@
             this.panelVentas.TabIndex = 3;
             this.panelVentas.Visible = false;
             this.panelVentas.Paint += new System.Windows.Forms.PaintEventHandler(this.catalogoVehiculos_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(399, 443);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Precio";
+            // 
+            // btnVerVentas
+            // 
+            this.btnVerVentas.Location = new System.Drawing.Point(518, 491);
+            this.btnVerVentas.Name = "btnVerVentas";
+            this.btnVerVentas.Size = new System.Drawing.Size(75, 33);
+            this.btnVerVentas.TabIndex = 63;
+            this.btnVerVentas.Text = "Ver ventas";
+            this.btnVerVentas.UseVisualStyleBackColor = true;
+            this.btnVerVentas.Click += new System.EventHandler(this.btnVerVentas_Click);
+            // 
+            // btnLimpiarVentas
+            // 
+            this.btnLimpiarVentas.Location = new System.Drawing.Point(680, 493);
+            this.btnLimpiarVentas.Name = "btnLimpiarVentas";
+            this.btnLimpiarVentas.Size = new System.Drawing.Size(75, 33);
+            this.btnLimpiarVentas.TabIndex = 62;
+            this.btnLimpiarVentas.Text = "Limpiar";
+            this.btnLimpiarVentas.UseVisualStyleBackColor = true;
+            this.btnLimpiarVentas.Click += new System.EventHandler(this.btnLimpiarVentas_Click);
             // 
             // btnAtrasVentas
             // 
@@ -771,36 +809,37 @@
             this.btnRegistrarVenta.TabIndex = 60;
             this.btnRegistrarVenta.Text = "Registrar";
             this.btnRegistrarVenta.UseVisualStyleBackColor = true;
+            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
-            // textBox12
+            // tbCompradorVentas
             // 
-            this.textBox12.Location = new System.Drawing.Point(518, 392);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(318, 20);
-            this.textBox12.TabIndex = 59;
+            this.tbCompradorVentas.Location = new System.Drawing.Point(518, 392);
+            this.tbCompradorVentas.Name = "tbCompradorVentas";
+            this.tbCompradorVentas.Size = new System.Drawing.Size(318, 20);
+            this.tbCompradorVentas.TabIndex = 59;
             // 
-            // textBox11
+            // tbPrecioVentas
             // 
-            this.textBox11.Location = new System.Drawing.Point(518, 436);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(318, 20);
-            this.textBox11.TabIndex = 58;
+            this.tbPrecioVentas.Location = new System.Drawing.Point(518, 436);
+            this.tbPrecioVentas.Name = "tbPrecioVentas";
+            this.tbPrecioVentas.Size = new System.Drawing.Size(318, 20);
+            this.tbPrecioVentas.TabIndex = 58;
             // 
-            // comboBox2
+            // cbVendedorVentas
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(518, 345);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(318, 21);
-            this.comboBox2.TabIndex = 56;
+            this.cbVendedorVentas.FormattingEnabled = true;
+            this.cbVendedorVentas.Location = new System.Drawing.Point(518, 345);
+            this.cbVendedorVentas.Name = "cbVendedorVentas";
+            this.cbVendedorVentas.Size = new System.Drawing.Size(318, 21);
+            this.cbVendedorVentas.TabIndex = 56;
             // 
-            // comboBox1
+            // cbVehiculoVentas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(518, 301);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(318, 21);
-            this.comboBox1.TabIndex = 55;
+            this.cbVehiculoVentas.FormattingEnabled = true;
+            this.cbVehiculoVentas.Location = new System.Drawing.Point(518, 301);
+            this.cbVehiculoVentas.Name = "cbVehiculoVentas";
+            this.cbVehiculoVentas.Size = new System.Drawing.Size(318, 21);
+            this.cbVehiculoVentas.TabIndex = 55;
             // 
             // label18
             // 
@@ -871,9 +910,10 @@
             this.panelSucursales.Controls.Add(this.label9);
             this.panelSucursales.Controls.Add(this.nombreSucursal);
             this.panelSucursales.Controls.Add(this.estadoSucursal);
-            this.panelSucursales.Location = new System.Drawing.Point(1007, 210);
+            this.panelSucursales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSucursales.Location = new System.Drawing.Point(0, 0);
             this.panelSucursales.Name = "panelSucursales";
-            this.panelSucursales.Size = new System.Drawing.Size(62, 57);
+            this.panelSucursales.Size = new System.Drawing.Size(1122, 749);
             this.panelSucursales.TabIndex = 48;
             this.panelSucursales.Visible = false;
             // 
@@ -984,34 +1024,6 @@
             this.estadoSucursal.Size = new System.Drawing.Size(341, 20);
             this.estadoSucursal.TabIndex = 7;
             // 
-            // btnLimpiarVentas
-            // 
-            this.btnLimpiarVentas.Location = new System.Drawing.Point(680, 493);
-            this.btnLimpiarVentas.Name = "btnLimpiarVentas";
-            this.btnLimpiarVentas.Size = new System.Drawing.Size(75, 33);
-            this.btnLimpiarVentas.TabIndex = 62;
-            this.btnLimpiarVentas.Text = "Limpiar";
-            this.btnLimpiarVentas.UseVisualStyleBackColor = true;
-            // 
-            // btnVerVentas
-            // 
-            this.btnVerVentas.Location = new System.Drawing.Point(518, 491);
-            this.btnVerVentas.Name = "btnVerVentas";
-            this.btnVerVentas.Size = new System.Drawing.Size(75, 33);
-            this.btnVerVentas.TabIndex = 63;
-            this.btnVerVentas.Text = "Ver ventas";
-            this.btnVerVentas.UseVisualStyleBackColor = true;
-            this.btnVerVentas.Click += new System.EventHandler(this.btnVerVentas_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(399, 443);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 64;
-            this.label1.Text = "Precio";
-            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1109,10 +1121,10 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label subtituloVentas;
         private System.Windows.Forms.Label tituloVentas;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox tbPrecioVentas;
+        private System.Windows.Forms.ComboBox cbVendedorVentas;
+        private System.Windows.Forms.ComboBox cbVehiculoVentas;
+        private System.Windows.Forms.TextBox tbCompradorVentas;
         private System.Windows.Forms.Button btnAtrasVentas;
         private System.Windows.Forms.Button btnRegistrarVenta;
         private System.Windows.Forms.Panel panelComputos;
@@ -1122,12 +1134,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label subtituloComputos;
         private System.Windows.Forms.Label tituloComputos;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.ComboBox cbMarcaComputos01;
+        private System.Windows.Forms.TextBox tbTotalDineroRangoFecha;
+        private System.Windows.Forms.TextBox tbTotalComision;
+        private System.Windows.Forms.TextBox tbTotalDineroComputos;
         private System.Windows.Forms.Button btnAtrasComputos;
         private System.Windows.Forms.Button btnRegistrarComputos;
         private System.Windows.Forms.Button btnAtrasPersonal;
@@ -1141,6 +1151,8 @@
         private System.Windows.Forms.Button btnVerVentas;
         private System.Windows.Forms.Button btnLimpiarVentas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnVerComputos;
+        private System.Windows.Forms.Button btnLimpiarComputos;
     }
 }
 

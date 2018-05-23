@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,8 @@ namespace DeJesus100315452_WinDealer
         DeJesus100315452_LibDealer.Vehiculos objVehiculo;
         DeJesus100315452_LibDealer.Personas objPersona;
         DeJesus100315452_LibDealer.Sucursales objSucursales;
+        DeJesus100315452_LibDealer.Ventas objVentas;
+        DeJesus100315452_LibDealer.Computos objComputos;
 
         public MainWindowForm()
         {
@@ -135,6 +139,44 @@ namespace DeJesus100315452_WinDealer
             subtituloVentas.Font = subtitulos;
             tituloComputos.Font = titulos;
             subtituloComputos.Font = subtitulos;
+
+            string nombreVehiculo = "vehiculos.txt";
+            string nombrePersona = "personas.txt";
+            string rutaVehiculo = ConfigurationManager.AppSettings["RootDirKey"];
+            string rutaPersona = ConfigurationManager.AppSettings["RootDirKey"];
+            objVehiculo = new DeJesus100315452_LibDealer.Vehiculos();
+            objPersona = new DeJesus100315452_LibDealer.Personas();
+            StreamReader archivoVehiculo = new StreamReader(rutaVehiculo + "\\" + nombreVehiculo);
+            StreamReader archivoPersona = new StreamReader(rutaPersona + "\\" + nombrePersona);
+            string linea = "";
+
+            if (objVehiculo.Leer())
+            {
+                while (!archivoVehiculo.EndOfStream)
+                {                  
+                    linea = archivoVehiculo.ReadLine();
+                    string[] campos = linea.Split('|');
+                    cbVehiculoVentas.Items.Add(campos[1] + campos[2]);
+                    cbMarcaComputos01.Items.Add(campos[1] + campos[2]);
+                }
+                archivoVehiculo.Close();
+                archivoVehiculo.Dispose();
+
+            }
+
+            if (objPersona.Leer())
+            {
+                while (!archivoPersona.EndOfStream)
+                {
+                    linea = archivoPersona.ReadLine();
+                    string[] campos = linea.Split('|');
+                    cbVendedorVentas.Items.Add(campos[1]);
+                }
+                archivoPersona.Close();
+                archivoPersona.Dispose();
+
+            }
+
         }
 
         private void panelCatalogoVehiculos_Paint(object sender, PaintEventArgs e)
@@ -356,6 +398,98 @@ namespace DeJesus100315452_WinDealer
         {
             ventasWindowForm objVentasWindow = new ventasWindowForm();
             objVentasWindow.Show();
+        }
+
+        private void btnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            string vehiculo, vendedor, comprador;
+            int precio;
+
+            vehiculo = cbVehiculoVentas.Text;
+            vendedor = cbVendedorVentas.Text;
+            comprador = tbCompradorVentas.Text;
+            precio = Convert.ToInt32(tbPrecioVentas.Text);
+            
+
+
+            objVentas = new DeJesus100315452_LibDealer.Ventas(vehiculo, vendedor, comprador, precio);
+            DialogResult dialogResult = MessageBox.Show("¿Desea guardarlo?", "Guardar...", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (objVentas.Grabar())
+                    MessageBox.Show("Se ha guardado existosamente :D");
+                else
+                    MessageBox.Show("Error {0}", objVentas.getMensaje());
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Trate nuevamente :(");
+            }
+
+            objVentas = null;
+            cbVehiculoVentas.Text = "";
+            cbVendedorVentas.Text = "";
+            tbCompradorVentas.Text = "";
+            tbPrecioVentas.Text = "";
+        }
+
+        private void btnLimpiarVentas_Click(object sender, EventArgs e)
+        {
+            cbVehiculoVentas.Text = "";
+            cbVendedorVentas.Text = "";
+            tbCompradorVentas.Text = "";
+            tbPrecioVentas.Text = "";
+        }
+
+        private void btnAtrasComputos_Click(object sender, EventArgs e)
+        {
+            panelComputos.Visible = false;
+        }
+
+        private void btnRegistrarComputos_Click(object sender, EventArgs e)
+        {
+            int totalDinero, totalComision;
+            string totalDineroRangoFecha, marcaMasVendida;
+
+            totalDinero = Convert.ToInt32(tbTotalDineroComputos.Text);
+            totalComision = Convert.ToInt32(tbTotalComision.Text);
+            totalDineroRangoFecha = tbTotalDineroRangoFecha.Text;
+            marcaMasVendida = cbMarcaComputos01.Text;
+            objComputos = new DeJesus100315452_LibDealer.Computos(totalDinero, totalComision, totalDineroRangoFecha, marcaMasVendida);
+            DialogResult dialogResult = MessageBox.Show("¿Desea guardarlo?", "Guardar...", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (objComputos.Grabar())
+                    MessageBox.Show("Se ha guardado existosamente :D");
+                else
+                    MessageBox.Show("Error {0}", objComputos.getMensaje());
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Trate nuevamente :(");
+            }
+
+            objComputos = null;
+            tbTotalDineroComputos.Text = "";
+            tbTotalComision.Text = "";
+            tbTotalDineroRangoFecha.Text = "";
+            cbMarcaComputos01.Text = "";
+        }
+
+        private void btnLimpiarComputos_Click(object sender, EventArgs e)
+        {
+            tbTotalDineroComputos.Text = "";
+            tbTotalComision.Text = "";
+            tbTotalDineroRangoFecha.Text = "";
+            cbMarcaComputos01.Text = "";
+        }
+
+        private void btnVerComputos_Click(object sender, EventArgs e)
+        {
+            computosWindowForm objVentanaComputos = new computosWindowForm();
+            objVentanaComputos.Show();
         }
     }
 }
