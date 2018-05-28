@@ -50,5 +50,16 @@ namespace DeJesus100315452_WinDealer
                 archivo.Dispose();
             }
         }
+
+        private void btnBuscarPersonal_Click(object sender, EventArgs e)
+        {
+            int idVenta = Convert.ToInt32(tbBuscarIdPersonal.Text);
+            if (objPersonas.buscar(idVenta))
+                MessageBox.Show(objPersonas.AllString());
+            else
+                MessageBox.Show("El empleado no se encuentra registrado");
+
+            tbBuscarIdPersonal.Text = "";
+        }
     }
 }

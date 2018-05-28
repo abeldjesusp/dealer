@@ -46,5 +46,16 @@ namespace DeJesus100315452_WinDealer
                 archivo.Dispose();
             }
         }
+
+        private void btnBuscarSucursal_Click(object sender, EventArgs e)
+        {
+            int idVenta = Convert.ToInt32(tbBucarIdSucursal.Text);
+            if (objSucursales.buscar(idVenta))
+                MessageBox.Show(objSucursales.AllString());
+            else
+                MessageBox.Show("La sucursal no se encuentra registrada");
+
+            tbBucarIdSucursal.Text = "";
+        }
     }
 }

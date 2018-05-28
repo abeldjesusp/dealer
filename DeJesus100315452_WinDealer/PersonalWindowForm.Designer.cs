@@ -36,6 +36,9 @@
             this.codioEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salarioPersonal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fehaIngresoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbBuscarIdPersonal = new System.Windows.Forms.TextBox();
+            this.btnBuscarPersonal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPersonal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,11 +57,10 @@
             this.codioEmpleado,
             this.salarioPersonal,
             this.fehaIngresoEmpleado});
-            this.dataGridPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridPersonal.Location = new System.Drawing.Point(0, 0);
             this.dataGridPersonal.Name = "dataGridPersonal";
             this.dataGridPersonal.ReadOnly = true;
-            this.dataGridPersonal.Size = new System.Drawing.Size(757, 395);
+            this.dataGridPersonal.Size = new System.Drawing.Size(757, 278);
             this.dataGridPersonal.TabIndex = 0;
             // 
             // idPersonal
@@ -100,17 +102,47 @@
             this.fehaIngresoEmpleado.ReadOnly = true;
             this.fehaIngresoEmpleado.Width = 150;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 315);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Buscar empleado por ID";
+            // 
+            // tbBuscarIdPersonal
+            // 
+            this.tbBuscarIdPersonal.Location = new System.Drawing.Point(15, 352);
+            this.tbBuscarIdPersonal.Name = "tbBuscarIdPersonal";
+            this.tbBuscarIdPersonal.Size = new System.Drawing.Size(118, 20);
+            this.tbBuscarIdPersonal.TabIndex = 2;
+            // 
+            // btnBuscarPersonal
+            // 
+            this.btnBuscarPersonal.Location = new System.Drawing.Point(149, 352);
+            this.btnBuscarPersonal.Name = "btnBuscarPersonal";
+            this.btnBuscarPersonal.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarPersonal.TabIndex = 3;
+            this.btnBuscarPersonal.Text = "Buscar";
+            this.btnBuscarPersonal.UseVisualStyleBackColor = true;
+            this.btnBuscarPersonal.Click += new System.EventHandler(this.btnBuscarPersonal_Click);
+            // 
             // PersonalWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 395);
+            this.Controls.Add(this.btnBuscarPersonal);
+            this.Controls.Add(this.tbBuscarIdPersonal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridPersonal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonalWindowForm";
             this.Text = "Personal";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPersonal)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,5 +155,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codioEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn salarioPersonal;
         private System.Windows.Forms.DataGridViewTextBoxColumn fehaIngresoEmpleado;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbBuscarIdPersonal;
+        private System.Windows.Forms.Button btnBuscarPersonal;
     }
 }

@@ -48,5 +48,16 @@ namespace DeJesus100315452_WinDealer
                 archivo.Dispose();
             }
         }
+
+        private void btnBuscarComputo_Click(object sender, EventArgs e)
+        {
+            int idVenta = Convert.ToInt32(tbBuscarIDComputo.Text);
+            if (objComputos.buscar(idVenta))
+                MessageBox.Show(objComputos.AllString());
+            else
+                MessageBox.Show("El computo no se encuentra registrado");
+
+            tbBuscarIDComputo.Text = "";
+        }
     }
 }

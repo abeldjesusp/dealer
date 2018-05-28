@@ -49,5 +49,16 @@ namespace DeJesus100315452_WinDealer
             }
             
         }
+
+        private void btnBuscarVehiculo_Click(object sender, EventArgs e)
+        {
+            int idVenta = Convert.ToInt32(tbBuscarIdVehiculo.Text);
+            if (objVehiculos.buscar(idVenta))
+                MessageBox.Show(objVehiculos.AllString());
+            else
+                MessageBox.Show("El vehiculo no se encuentra registrado");
+
+            tbBuscarIdVehiculo.Text = "";
+        }
     }
 }

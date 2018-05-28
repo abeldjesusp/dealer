@@ -4,3 +4,4 @@
 1804764470 | Angel Odoner Rosario | Jefe de limpieza | 004 | 45000 | lunes, 1 de febrero de 2017 | 29/3/2018 9:58:20 a.m.
 1319870073 | Pedro Salami | Vendedor | 005 | 60000 | viernes, 8 de octubre de 2017 | 29/3/2018 11:53:58 a.m.
 1574147240 | Tony Stark | Mecánico automotríz | 006 | 540000 | jueves, 24 de noviembre de 2016 | 19/5/2018 8:16:12 p.m.
+731417138 | Perter Parker | Vendedor | 7 | 60000 | lunes, 28 de mayo de 2018 | 28/5/2018 11:58:25 a.m.

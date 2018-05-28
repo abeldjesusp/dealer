@@ -36,6 +36,9 @@
             this.dineroRangoFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaMasVendidaComputos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaComputos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbBuscarIDComputo = new System.Windows.Forms.TextBox();
+            this.btnBuscarComputo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridComputos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,11 +57,10 @@
             this.dineroRangoFecha,
             this.marcaMasVendidaComputos,
             this.fechaComputos});
-            this.dataGridComputos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridComputos.Location = new System.Drawing.Point(0, 0);
             this.dataGridComputos.Name = "dataGridComputos";
             this.dataGridComputos.ReadOnly = true;
-            this.dataGridComputos.Size = new System.Drawing.Size(774, 336);
+            this.dataGridComputos.Size = new System.Drawing.Size(774, 292);
             this.dataGridComputos.TabIndex = 0;
             // 
             // idComputos
@@ -101,11 +103,40 @@
             this.fechaComputos.ReadOnly = true;
             this.fechaComputos.Width = 130;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 306);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Buscar computo por ID";
+            // 
+            // tbBuscarIDComputo
+            // 
+            this.tbBuscarIDComputo.Location = new System.Drawing.Point(26, 336);
+            this.tbBuscarIDComputo.Name = "tbBuscarIDComputo";
+            this.tbBuscarIDComputo.Size = new System.Drawing.Size(113, 20);
+            this.tbBuscarIDComputo.TabIndex = 2;
+            // 
+            // btnBuscarComputo
+            // 
+            this.btnBuscarComputo.Location = new System.Drawing.Point(156, 336);
+            this.btnBuscarComputo.Name = "btnBuscarComputo";
+            this.btnBuscarComputo.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarComputo.TabIndex = 3;
+            this.btnBuscarComputo.Text = "Buscar";
+            this.btnBuscarComputo.UseVisualStyleBackColor = true;
+            this.btnBuscarComputo.Click += new System.EventHandler(this.btnBuscarComputo_Click);
+            // 
             // computosWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 336);
+            this.ClientSize = new System.Drawing.Size(774, 368);
+            this.Controls.Add(this.btnBuscarComputo);
+            this.Controls.Add(this.tbBuscarIDComputo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridComputos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -114,6 +145,7 @@
             this.Text = "Computos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridComputos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,5 +158,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dineroRangoFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaMasVendidaComputos;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaComputos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbBuscarIDComputo;
+        private System.Windows.Forms.Button btnBuscarComputo;
     }
 }

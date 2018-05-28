@@ -25,34 +25,14 @@ namespace DeJesus100315452_WinDealer
             InitializeComponent();
         }
 
-        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void acecaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("  Dealer Abel S.R.L Copyright 2018  ");
-        }
-
-        private void treeViewMenu_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            
-        }
-
-        private void libreriaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void vehiculosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -62,66 +42,6 @@ namespace DeJesus100315452_WinDealer
             panelSucursales.Visible = false;
             panelVentas.Visible = false;
             panelCatalogoVehiculos.Visible = true;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void catalogoVehiculos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void agregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void MainWindowForm_Load(object sender, EventArgs e)
@@ -153,7 +73,7 @@ namespace DeJesus100315452_WinDealer
             if (objVehiculo.Leer())
             {
                 while (!archivoVehiculo.EndOfStream)
-                {                  
+                {
                     linea = archivoVehiculo.ReadLine();
                     string[] campos = linea.Split('|');
                     cbVehiculoVentas.Items.Add(campos[1] + campos[2]);
@@ -177,25 +97,119 @@ namespace DeJesus100315452_WinDealer
 
             }
 
-        }
+            llenarNodes();
 
-        private void panelCatalogoVehiculos_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void llenarNodes()
         {
+            string nombreVehiculo = "vehiculos.txt",
+                   nombreVentas = "ventas.txt",
+                   nombreComputos = "computos.txt",
+                   nombrePersona = "personas.txt",
+                   nombreSucursales = "sucursales.txt",
+                   nombrePersonas = "personas.txt",
+                   rutaVehiculo = ConfigurationManager.AppSettings["RootDirKey"],
+                   rutaVentas = ConfigurationManager.AppSettings["RootDirKey"],
+                   rutaComputos = ConfigurationManager.AppSettings["RootDirKey"],
+                   rutaPersona = ConfigurationManager.AppSettings["RootDirKey"],
+                   rutaSucursales = ConfigurationManager.AppSettings["RootDirKey"],
+                   rutaPersonas = ConfigurationManager.AppSettings["RootDirKey"];
 
-        }
+            objVehiculo = new DeJesus100315452_LibDealer.Vehiculos();
+            objPersona = new DeJesus100315452_LibDealer.Personas();
+            objVentas = new DeJesus100315452_LibDealer.Ventas();
+            objComputos = new DeJesus100315452_LibDealer.Computos();
+            objSucursales = new DeJesus100315452_LibDealer.Sucursales();
+            StreamReader archivoVehiculo = new StreamReader(rutaVehiculo + "\\" + nombreVehiculo),
+                         archivoVentas = new StreamReader(rutaVentas + "\\" + nombreVentas),
+                         archivoComputos = new StreamReader(rutaVehiculo + "\\" + nombreComputos),
+                         archivoPersona = new StreamReader(rutaPersona + "\\" + nombrePersona),
+                         archivoSucursales = new StreamReader(rutaSucursales + "\\" + nombreSucursales),
+                         archivoPersonas = new StreamReader(rutaPersonas + "\\" + nombrePersonas);
+            string linea = "";
 
-        private void tituloSucursales_Click(object sender, EventArgs e)
-        {
+            //Primer node
+            tvmMain.Nodes.Add("Vehiculos");
+            tvmMain.Nodes[0].Nodes.Add("Cátalogo de vehiculos");
+            if (objVehiculo.Leer())
+            {  
+                while (!archivoVehiculo.EndOfStream)
+                {
+                    linea = archivoVehiculo.ReadLine();
+                    string[] campos = linea.Split('|');
+                    tvmMain.Nodes[0].Nodes[0].Nodes.Add(campos[1] + campos[2]);
+                }
+                archivoVehiculo.Close();
+                archivoVehiculo.Dispose();
 
-        }
+            }
+            tvmMain.Nodes[0].Nodes.Add("Ventas");
+            if (objVentas.Leer())
+            {                
+                while (!archivoVentas.EndOfStream)
+                {
+                    linea = archivoVentas.ReadLine();
+                    string[] campos = linea.Split('|');
+                    tvmMain.Nodes[0].Nodes[1].Nodes.Add(campos[1] + "-->" + campos[2] + "-->" + campos[3]);
+                }
+                archivoVentas.Close();
+                archivoVentas.Dispose();
 
-        private void subtituloComputos_Click(object sender, EventArgs e)
-        {
+            }            
+            tvmMain.Nodes[0].Nodes.Add("Computos");
+            if (objComputos.Leer())
+            {
+                while (!archivoComputos.EndOfStream)
+                {
+                    linea = archivoComputos.ReadLine();
+                    string[] campos = linea.Split('|');
+                    tvmMain.Nodes[0].Nodes[2].Nodes.Add("$"+ campos[1] + "-->" + campos[4]);
+                }
+                archivoComputos.Close();
+                archivoComputos.Dispose();
+
+            }
+
+            //segundo node
+            tvmMain.Nodes.Add("Sucursales");
+            tvmMain.Nodes[1].Nodes.Add("Información de sucursales");
+            if (objSucursales.Leer())
+            {
+                while (!archivoSucursales.EndOfStream)
+                {
+                    linea = archivoSucursales.ReadLine();
+                    string[] campos = linea.Split('|');
+                    tvmMain.Nodes[1].Nodes[0].Nodes.Add(campos[1] + campos[2]);
+                }
+                archivoSucursales.Close();
+                archivoSucursales.Dispose();
+
+            }
+            
+            tvmMain.Nodes[1].Nodes.Add("Personal");
+            if (objPersona.Leer())
+            {
+                while (!archivoPersona.EndOfStream)
+                {
+                    linea = archivoPersona.ReadLine();
+                    string[] campos = linea.Split('|');
+                    tvmMain.Nodes[1].Nodes[1].Nodes.Add(campos[1] + campos[2]);
+                }
+                archivoPersona.Close();
+                archivoPersona.Dispose();
+
+            }
+            tvmMain.Nodes.Add("Tienda de libros");
+
+
+
+            objVehiculo = null;
+            objPersona = null;
+            objVentas = null;
+            objComputos = null;
+            objSucursales = null;
 
         }
 

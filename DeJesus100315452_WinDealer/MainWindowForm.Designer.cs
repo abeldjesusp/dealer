@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Información de Vehiculos");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Vehiculos", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Información de Sucursales");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Personal");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Sucursales", new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Tienda de Libros");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindowForm));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.msMainForm = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +43,7 @@
             this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acecaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treeViewMenu = new System.Windows.Forms.TreeView();
+            this.tvmMain = new System.Windows.Forms.TreeView();
             this.panelCatalogoVehiculos = new System.Windows.Forms.Panel();
             this.btnVerCatalogo = new System.Windows.Forms.Button();
             this.btnLimpiarCatalogo = new System.Windows.Forms.Button();
@@ -129,7 +120,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.nombreSucursal = new System.Windows.Forms.TextBox();
             this.estadoSucursal = new System.Windows.Forms.TextBox();
-            this.menuStrip1.SuspendLayout();
+            this.msMainForm.SuspendLayout();
             this.panelCatalogoVehiculos.SuspendLayout();
             this.panelComputos.SuspendLayout();
             this.panelPersonal.SuspendLayout();
@@ -137,20 +128,20 @@
             this.panelSucursales.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // msMainForm
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msMainForm.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.msMainForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.vehiculosToolStripMenuItem,
             this.sucursalesToolStripMenuItem,
             this.libreriaToolStripMenuItem,
             this.acecaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1122, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStripPrincipal";
+            this.msMainForm.Location = new System.Drawing.Point(0, 0);
+            this.msMainForm.Name = "msMainForm";
+            this.msMainForm.Size = new System.Drawing.Size(1122, 24);
+            this.msMainForm.TabIndex = 1;
+            this.msMainForm.Text = "menuStripPrincipal";
             // 
             // archivoToolStripMenuItem
             // 
@@ -228,7 +219,7 @@
             this.libreriaToolStripMenuItem.Name = "libreriaToolStripMenuItem";
             this.libreriaToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.libreriaToolStripMenuItem.Text = "Tienda de Libros";
-            this.libreriaToolStripMenuItem.Click += new System.EventHandler(this.libreriaToolStripMenuItem_Click);
+        
             // 
             // librosToolStripMenuItem
             // 
@@ -243,7 +234,6 @@
             this.acecaToolStripMenuItem.Name = "acecaToolStripMenuItem";
             this.acecaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.acecaToolStripMenuItem.Text = "Ayuda";
-            this.acecaToolStripMenuItem.Click += new System.EventHandler(this.acecaToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -252,30 +242,13 @@
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
-            // treeViewMenu
+            // tvmMain
             // 
-            this.treeViewMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.treeViewMenu.Location = new System.Drawing.Point(0, 24);
-            this.treeViewMenu.Name = "treeViewMenu";
-            treeNode1.Name = "Node1";
-            treeNode1.Text = "Información de Vehiculos";
-            treeNode2.Name = "Node0";
-            treeNode2.Text = "Vehiculos";
-            treeNode3.Name = "Node5";
-            treeNode3.Text = "Información de Sucursales";
-            treeNode4.Name = "Node6";
-            treeNode4.Text = "Personal";
-            treeNode5.Name = "Node4";
-            treeNode5.Text = "Sucursales";
-            treeNode6.Name = "Node7";
-            treeNode6.Text = "Tienda de Libros";
-            this.treeViewMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode5,
-            treeNode6});
-            this.treeViewMenu.Size = new System.Drawing.Size(236, 725);
-            this.treeViewMenu.TabIndex = 2;
-            this.treeViewMenu.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewMenu_AfterSelect);
+            this.tvmMain.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tvmMain.Location = new System.Drawing.Point(0, 24);
+            this.tvmMain.Name = "tvmMain";
+            this.tvmMain.Size = new System.Drawing.Size(277, 725);
+            this.tvmMain.TabIndex = 2;
             // 
             // panelCatalogoVehiculos
             // 
@@ -300,7 +273,7 @@
             this.panelCatalogoVehiculos.Size = new System.Drawing.Size(1122, 749);
             this.panelCatalogoVehiculos.TabIndex = 11;
             this.panelCatalogoVehiculos.Visible = false;
-            this.panelCatalogoVehiculos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCatalogoVehiculos_Paint);
+            
             // 
             // btnVerCatalogo
             // 
@@ -442,9 +415,9 @@
             this.panelComputos.Controls.Add(this.subtituloComputos);
             this.panelComputos.Controls.Add(this.tituloComputos);
             this.panelComputos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelComputos.Location = new System.Drawing.Point(236, 24);
+            this.panelComputos.Location = new System.Drawing.Point(277, 24);
             this.panelComputos.Name = "panelComputos";
-            this.panelComputos.Size = new System.Drawing.Size(886, 725);
+            this.panelComputos.Size = new System.Drawing.Size(845, 725);
             this.panelComputos.TabIndex = 49;
             this.panelComputos.Visible = false;
             // 
@@ -561,7 +534,6 @@
             this.subtituloComputos.Size = new System.Drawing.Size(93, 13);
             this.subtituloComputos.TabIndex = 1;
             this.subtituloComputos.Text = "Registrar computo";
-            this.subtituloComputos.Click += new System.EventHandler(this.subtituloComputos_Click);
             // 
             // tituloComputos
             // 
@@ -760,7 +732,6 @@
             this.panelVentas.Size = new System.Drawing.Size(1122, 749);
             this.panelVentas.TabIndex = 3;
             this.panelVentas.Visible = false;
-            this.panelVentas.Paint += new System.Windows.Forms.PaintEventHandler(this.catalogoVehiculos_Paint);
             // 
             // label1
             // 
@@ -964,7 +935,6 @@
             this.tituloSucursales.Size = new System.Drawing.Size(59, 13);
             this.tituloSucursales.TabIndex = 0;
             this.tituloSucursales.Text = "Sucursales";
-            this.tituloSucursales.Click += new System.EventHandler(this.tituloSucursales_Click);
             // 
             // btnRegistrarSucursal
             // 
@@ -1030,21 +1000,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 749);
             this.Controls.Add(this.panelComputos);
-            this.Controls.Add(this.treeViewMenu);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tvmMain);
+            this.Controls.Add(this.msMainForm);
             this.Controls.Add(this.panelVentas);
             this.Controls.Add(this.panelPersonal);
             this.Controls.Add(this.panelCatalogoVehiculos);
             this.Controls.Add(this.panelSucursales);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.msMainForm;
             this.Name = "MainWindowForm";
             this.Text = "Dealer Abel S.R.L";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainWindowForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.msMainForm.ResumeLayout(false);
+            this.msMainForm.PerformLayout();
             this.panelCatalogoVehiculos.ResumeLayout(false);
             this.panelCatalogoVehiculos.PerformLayout();
             this.panelComputos.ResumeLayout(false);
@@ -1062,7 +1032,7 @@
 
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip msMainForm;
         private System.Windows.Forms.ToolStripMenuItem vehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sucursalesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem libreriaToolStripMenuItem;
@@ -1075,7 +1045,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnSalir;
         private System.Windows.Forms.ToolStripMenuItem acecaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
-        private System.Windows.Forms.TreeView treeViewMenu;
+        private System.Windows.Forms.TreeView tvmMain;
         private System.Windows.Forms.ToolStripMenuItem librosToolStripMenuItem;
         private System.Windows.Forms.Panel panelCatalogoVehiculos;
         private System.Windows.Forms.Button btnAtrasVehiculo;

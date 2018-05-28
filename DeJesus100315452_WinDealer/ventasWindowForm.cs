@@ -49,5 +49,16 @@ namespace DeJesus100315452_WinDealer
             }
 
         }
+
+        private void btnBuscarVentas_Click(object sender, EventArgs e)
+        {
+            int idVenta = Convert.ToInt32(tbBuscarVentas.Text);
+            if (objVentas.buscar(idVenta))        
+                MessageBox.Show(objVentas.AllString());
+            else
+                MessageBox.Show("La venta no se encuentra registrada");
+
+            tbBuscarVentas.Text = "";
+        }
     }
 }
