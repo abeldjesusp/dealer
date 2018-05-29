@@ -16,3 +16,5 @@ C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus1003154
 C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.sucursalesWindowForm.resources
 C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.ventasWindowForm.resources
 C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\obj\Debug\DeJesus100315452_WinDealer.computosWindowForm.resources
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\SalesLibrary.dll
+C:\Users\anyi\Desktop\dealer\DeJesus100315452_WinDealer\bin\Debug\SalesLibrary.pdb

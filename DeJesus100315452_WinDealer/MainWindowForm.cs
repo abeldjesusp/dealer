@@ -35,15 +35,6 @@ namespace DeJesus100315452_WinDealer
             MessageBox.Show("  Dealer Abel S.R.L Copyright 2018  ");
         }
 
-        private void vehiculosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            panelPersonal.Visible = false;
-            panelComputos.Visible = false;
-            panelSucursales.Visible = false;
-            panelVentas.Visible = false;
-            panelCatalogoVehiculos.Visible = true;
-        }
-
         private void MainWindowForm_Load(object sender, EventArgs e)
         {
             Font titulos = new Font("Arial", 22.0f);
@@ -59,6 +50,8 @@ namespace DeJesus100315452_WinDealer
             subtituloVentas.Font = subtitulos;
             tituloComputos.Font = titulos;
             subtituloComputos.Font = subtitulos;
+            tituloLibros.Font = titulos;
+            subtituloLibros.Font = subtitulos;
 
             string nombreVehiculo = "vehiculos.txt";
             string nombrePersona = "personas.txt";
@@ -213,18 +206,29 @@ namespace DeJesus100315452_WinDealer
 
         }
 
+        private void vehiculosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            panelLibros.Visible = false;
+            panelPersonal.Visible = false;
+            panelComputos.Visible = false;
+            panelSucursales.Visible = false;
+            panelVentas.Visible = false;
+            panelCatalogoVehiculos.Visible = true;
+        }
+
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelLibros.Visible = false;
             panelPersonal.Visible = false;
             panelComputos.Visible = false;
             panelSucursales.Visible = false;
             panelCatalogoVehiculos.Visible = false;
-            panelVentas.Visible = true;
-            
+            panelVentas.Visible = true;            
         }
 
         private void computosGeneralesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelLibros.Visible = false;
             panelPersonal.Visible = false;
             panelVentas.Visible = false;            
             panelSucursales.Visible = false;
@@ -234,6 +238,7 @@ namespace DeJesus100315452_WinDealer
 
         private void informaciónDeSucursalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelLibros.Visible = false;
             panelPersonal.Visible = false;
             panelVentas.Visible = false;
             panelComputos.Visible = false;
@@ -242,12 +247,23 @@ namespace DeJesus100315452_WinDealer
         }
 
         private void personalToolStripMenuItem_Click(object sender, EventArgs e)
-        {            
+        {
+            panelLibros.Visible = false;
             panelVentas.Visible = false;
             panelComputos.Visible = false;
             panelCatalogoVehiculos.Visible = false;
             panelSucursales.Visible = false;
             panelPersonal.Visible = true;
+        }
+
+        private void librosToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            panelVentas.Visible = false;
+            panelComputos.Visible = false;
+            panelCatalogoVehiculos.Visible = false;
+            panelSucursales.Visible = false;
+            panelPersonal.Visible = false;
+            panelLibros.Visible = true;
         }
 
         private void btnRegistrarVehiculo_Click(object sender, EventArgs e)
@@ -505,5 +521,7 @@ namespace DeJesus100315452_WinDealer
             computosWindowForm objVentanaComputos = new computosWindowForm();
             objVentanaComputos.Show();
         }
+
+        
     }
 }

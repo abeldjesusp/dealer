@@ -129,6 +129,10 @@
       <Project>{0062c027-d4e6-4b4a-a4f9-407de956bd6c}</Project>
       <Name>DeJesus100315452_LibDealer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SalesLibrary\SalesLibrary.csproj">
+      <Project>{3009e332-5bf7-4246-b99f-55a4203fd77a}</Project>
+      <Name>SalesLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
