@@ -34,8 +34,9 @@ namespace SalesLibrary
             try
             {
                 SqlConnection objConn = new SqlConnection();
-                objConn.ConnectionString = System.Configuration.ConfigurationManager.AppSettings["my_connect_" +
-                mv_str_current_DB];
+                //objConn.ConnectionString = System.Configuration.ConfigurationManager.AppSettings["DeJesus100315452_WinDealer.Properties.Settings.pubsConnectionString" +
+                objConn.ConnectionString = "Data Source=LAPTOP-197OCJ1F;Initial Catalog=pubs; Integrated Security=True";
+                //mv_str_current_DB];
                 objConn.Open();
                 SqlCommand objCmd = new SqlCommand(p_str_sqlQuery, objConn);
                 SqlDataAdapter objAdapt = new SqlDataAdapter(objCmd);
@@ -64,8 +65,9 @@ namespace SalesLibrary
             try
             {
                 SqlConnection objConn = new SqlConnection();
-                objConn.ConnectionString = System.Configuration.ConfigurationManager.AppSettings["my_connect_" +
-                mv_str_current_DB];
+                //objConn.ConnectionString = System.Configuration.ConfigurationManager.AppSettings["DeJesus100315452_WinDealer.Properties.Settings.pubsConnectionString" +
+                objConn.ConnectionString = "Data Source=LAPTOP-197OCJ1F;Initial Catalog=pubs; Integrated Security=True";
+               // mv_str_current_DB];
                 objConn.Open();
                 SqlCommand objCmd = new SqlCommand(p_str_sqlQuery, objConn);
                 objCmd.ExecuteNonQuery();

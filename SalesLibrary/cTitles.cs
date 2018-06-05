@@ -72,6 +72,7 @@ namespace SalesLibrary
         {
             try
             {
+                string lv_str_fecha = p_pubdate.Year + "-" + p_pubdate.Month + "-" + p_pubdate.Day;
                 string lv_INSERT_SQL = "INSERT INTO titles VALUES(";
                 lv_INSERT_SQL += "'" + p_title_id + "'";
                 lv_INSERT_SQL += ",'" + p_title + "'";
@@ -80,9 +81,9 @@ namespace SalesLibrary
                 lv_INSERT_SQL += "," + p_price + "";
                 lv_INSERT_SQL += "," + p_advance + "";
                 lv_INSERT_SQL += "," + p_royalty + "";
-                lv_INSERT_SQL += "," + p_ytd_sales + "'";
+                lv_INSERT_SQL += "," + p_ytd_sales + "";
                 lv_INSERT_SQL += ",'" + p_notes + "'";
-                lv_INSERT_SQL += ",'" + p_pubdate + "')";
+                lv_INSERT_SQL += ",'" + lv_str_fecha + "')";
                 return executeDML(lv_INSERT_SQL);
             }
             catch (Exception objError)

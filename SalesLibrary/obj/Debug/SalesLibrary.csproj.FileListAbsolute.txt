@@ -3,3 +3,5 @@ C:\Users\anyi\Desktop\dealer\SalesLibrary\bin\Debug\SalesLibrary.pdb
 C:\Users\anyi\Desktop\dealer\SalesLibrary\obj\Debug\SalesLibrary.csproj.CoreCompileInputs.cache
 C:\Users\anyi\Desktop\dealer\SalesLibrary\obj\Debug\SalesLibrary.dll
 C:\Users\anyi\Desktop\dealer\SalesLibrary\obj\Debug\SalesLibrary.pdb
+C:\Users\anyi\Desktop\dealer\SalesLibrary\obj\Debug\SalesLibrary.csprojResolveAssemblyReference.cache
+C:\Users\anyi\Desktop\dealer\SalesLibrary\bin\Debug\SalesLibrary.dll.config

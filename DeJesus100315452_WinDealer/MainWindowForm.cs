@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DeJesus100315452_LibDealer;
+using SalesLibrary;
 
 namespace DeJesus100315452_WinDealer
 {
@@ -19,6 +21,7 @@ namespace DeJesus100315452_WinDealer
         DeJesus100315452_LibDealer.Sucursales objSucursales;
         DeJesus100315452_LibDealer.Ventas objVentas;
         DeJesus100315452_LibDealer.Computos objComputos;
+        SalesLibrary.cTitles objTitles;
 
         public MainWindowForm()
         {
@@ -203,7 +206,6 @@ namespace DeJesus100315452_WinDealer
             objVentas = null;
             objComputos = null;
             objSucursales = null;
-
         }
 
         private void vehiculosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -494,7 +496,7 @@ namespace DeJesus100315452_WinDealer
                 if (objComputos.Grabar())
                     MessageBox.Show("Se ha guardado existosamente :D");
                 else
-                    MessageBox.Show("Error {0}", objComputos.getMensaje());
+                    MessageBox.Show("Error " + objComputos.getMensaje());
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -522,6 +524,51 @@ namespace DeJesus100315452_WinDealer
             objVentanaComputos.Show();
         }
 
-        
+        private void btnGuardarLibros_Click(object sender, EventArgs e)
+        {
+            string idTitles, titles, type, pudID, notes;
+            float price;
+            int advance, royalty, ytdSales;
+            DateTime pudDate;
+
+            idTitles = tbTitleID.Text;
+            titles = tbTitle.Text;
+            type = tbType.Text;
+            pudID = tbPubId.Text;
+            price = (float)Convert.ToSingle(tbPrice.Text);
+            advance = Convert.ToInt32(tbAdvance.Text);
+            royalty = Convert.ToInt32(tbRoyalty.Text);
+            ytdSales = Convert.ToInt32(tbYTDsales.Text);
+            notes = tbNotes.Text;
+            pudDate = Convert.ToDateTime(dtPubDate.Text);
+            //pudDate = DateTime.Parse(dtPubDate.Text);
+
+            objTitles = new cTitles();
+            DialogResult dialogResult = MessageBox.Show("¿Desea guardarlo?", "Guardar...", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (objTitles.Agregar(idTitles, titles, type, pudID, price, advance, royalty, ytdSales, notes, pudDate))
+                    MessageBox.Show("Se ha guardado existosamente :D");
+                else
+                    MessageBox.Show("Error no hay conexion a la base de datos");
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Trate nuevamente :(");
+            }
+
+            objTitles = null;
+            tbTitleID.Text = "";
+            tbTitle.Text = "";
+            tbType.Text = "";
+            tbPubId.Text = "";
+            tbPrice.Text = "";
+            tbAdvance.Text = "";
+            tbRoyalty.Text = "";
+            tbYTDsales.Text = "";
+            tbNotes.Text = "";
+            dtPubDate.Text = "";
+        }
     }
 }
